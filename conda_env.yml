@@ -1,0 +1,21 @@
+name: tina-env
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - matplotlib
+  - pytorch
+  - torchvision
+  - cudatoolkit=11.3  # For GPU support
+  - onnx
+  - onnxruntime
+  - scipy
+  - pip
+  - pip:
+    - torchsummary  # Example utility
+    - onnx-tf
+    - tensorboard
