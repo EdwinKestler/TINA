@@ -1,0 +1,2 @@
+[console_scripts]
+tina-example = tina.examples.pytorch.mnist_example:main

@@ -6,14 +6,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="tina",  # Package name
-    version="0.1.0",  # Initial version
+    version="0.1.1",  # Updated version
     author="Edwin Kestler",
     author_email="your-email@example.com",
     description="TINA - Optimized Layers for PyTorch and ONNX",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/EdwinKestler/TINA",  # Project URL
-    packages=find_packages(where="tina"),  # Package directory
+    packages=find_packages(include=["tina", "tina.*"]),  # Include the tina package and subpackages
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
