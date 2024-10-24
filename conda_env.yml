@@ -1,21 +1,25 @@
 name: tina-env
 channels:
-  - defaults
-  - conda-forge
   - pytorch
+  - conda-forge
+  - defaults
+  - nvidia
 dependencies:
   - python=3.9
+  - pip
+  - cudatoolkit=11.8  # Updated to CUDA 11.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8  # PyTorch with CUDA 11.8 support
   - numpy
   - pandas
   - matplotlib
-  - pytorch
-  - torchvision
-  - cudatoolkit=11.3  # For GPU support
-  - onnx
-  - onnxruntime
-  - scipy
-  - pip
+  - scikit-learn
+  - pytest
+  - jupyterlab
   - pip:
-    - torchsummary  # Example utility
-    - onnx-tf
-    - tensorboard
+      - onnxruntime-gpu
+      - onnx
+      - tensorboard
+      - tqdm
